@@ -10,11 +10,15 @@ $config = [
     'layout' => 'blog', // задаем стартовый шаблон
     'name' => 'AlexPaiste', // задаем title
     'language' => 'ru', // задаем язык в html/lang
+    'defaultRoute' => 'post/index', // путь открытия сайта по умолчанию
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+        'formatter' => [ // настраиваем компонент для показа даты
+            'dateFormat' => 'php: d F Y', // формат даты отображения
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'Rm-ml2BJ3_MVlIpDpo_CL-ZYHHlKAUD8',
